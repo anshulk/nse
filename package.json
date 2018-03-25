@@ -4,7 +4,7 @@
   "description": "Get data from National Stock Exchange",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/**/**.spec.js"
+    "test": "mocha test/**/**.spec.js"
   },
   "repository": {
     "type": "git",
