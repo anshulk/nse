@@ -1,0 +1,33 @@
+{
+  "name": "nse",
+  "version": "1.0.0",
+  "description": "Get data from National Stock Exchange",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/**.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshulk/nse.git"
+  },
+  "keywords": [
+    "nse",
+    "stocks",
+    "stock",
+    "market"
+  ],
+  "author": "Anshul Kushwaha <anshulkushwaha1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anshulk/nse/issues"
+  },
+  "homepage": "https://github.com/anshulk/nse#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "mocha": "^5.0.5"
+  },
+  "dependencies": {
+    "got": "^8.3.0"
+  }
+}
