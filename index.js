@@ -10,9 +10,14 @@ let got_options = {
     }
 };
 
+let urls = {
+    symbolPrice: 'https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxGetQuoteJSON.jsp',
+    indices: 'http://www.nseindia.com/homepage/Indices1.json',
+};
+
 let price = async (symbol) => {
-    let url = 'https://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxGetQuoteJSON.jsp?symbol='+symbol;
-    let response = await got(url,got_options);
+    let url = urls.symbolPrice + '?symbol=' + symbol;
+    let response = await got(url, got_options);
     response = JSON.parse(response.body);
     return response;
 };
@@ -23,8 +28,11 @@ let lastPrice = async (symbol) => {
     return p.data[0].lastPrice;
 };
 
-let indices = () => {
-
+let indices = async () => {
+    let response = await got(urls.indices, got_options);
+    response = JSON.parse(response.body);
+    // console.log(response.data);
+    return response.data;
 };
 
 module.exports = {
